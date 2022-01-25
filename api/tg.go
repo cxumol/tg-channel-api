@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"strconv"
 
+	md "github.com/JohannesKaufmann/html-to-markdown"
 	"github.com/PuerkitoBio/goquery"
 )
 
@@ -63,9 +64,11 @@ func getTGchannel(channelID string) []interface{} {
 	messages_structured := make([]interface{}, MaxMsgNum)
 	doc.Find("div.tgme_widget_message_wrap").Each(func(i int, s *goquery.Selection) {
 		message_structured := make(map[string]string)
-		message_structured["text"] = s.Find("div.tgme_widget_message_text").Text()
-		message_structured["html"], err = s.Find("div.tgme_widget_message_text").Html()
-		check(err)
+		// message_structured["text"] = s.Find("div.tgme_widget_message_text").Text()
+		// message_structured["html"], err = s.Find("div.tgme_widget_message_text").Html()
+		// check(err)
+		converter := md.NewConverter("", true, nil)
+		message_structured["markdown"] = converter.Convert(s.Find("div.tgme_widget_message_text"))
 		message_structured["datetime"], _ = s.Find(".tgme_widget_message_date time").Attr("datetime")
 		message_structured["owner"] = s.Find(".tgme_widget_message_owner_name").Text()
 		message_structured["views"] = s.Find(".tgme_widget_message_views").Text()
