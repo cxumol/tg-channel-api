@@ -19,7 +19,7 @@ Request: `GET /:channel_username/:message_id?`
 
 Parameters of request:
 - `channel_username` (string) : the substring of the channel link after "t.me", e.g. `durov` is the `channel_username` of `t.me/durov` 
-- `message_id` (integer, within [1, 20] for now) : the ordinal number of the message, e.g. `1` for the latest message, `2` for the second-latest message, etc.
+- `message_id` (integer, within [1, 20] for now, optional) : the ordinal number of the message, e.g. `1` for the latest message, `2` for the second-latest message, etc. Default is `1`.
 
 For response format, check `https://t-me.vercel.app/durov`. 
 
