@@ -47,6 +47,6 @@ Contributions are welcome!
 Try these ideas:
 - make progress to the to-do list above
 - deploy to a new platform
-- add a new feature
-- fix a bug
+- propose/add a new feature
+- find/fix a bug
 - improve the performance
