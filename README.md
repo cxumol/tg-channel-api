@@ -22,7 +22,9 @@ parameters:
 Technical details
 -----------------
 
-It's running on [Vercel](https://vercel.com/) and uses a [Go](https://go.dev/) runtime to serve the API.
+It's running on [Vercel](https://vercel.com/) and uses its [Go runtime](https://vercel.com/docs/runtimes#official-runtimes/go) to serve the API.
+
+To deploy your own instance, simplely for this repository and connect your copy to [Vercel](https://vercel.com/). 
 
 
 TO DO
@@ -37,3 +39,10 @@ Contributing
 ------------
 
 Contributions are welcome!
+
+Try these ideas:
+- make progress to the to-do list above
+- deploy to a new platform
+- add a new feature
+- fix a bug
+- improve the performance
