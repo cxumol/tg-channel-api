@@ -64,6 +64,8 @@ func getTGchannel(channelID string) []interface{} {
 	doc.Find("div.tgme_widget_message_wrap").Each(func(i int, s *goquery.Selection) {
 		message_structured := make(map[string]string)
 		message_structured["text"] = s.Find("div.tgme_widget_message_text").Text()
+		message_structured["html"], err = s.Find("div.tgme_widget_message_text").Html()
+		check(err)
 		message_structured["datetime"], _ = s.Find(".tgme_widget_message_date time").Attr("datetime")
 		message_structured["owner"] = s.Find(".tgme_widget_message_owner_name").Text()
 		message_structured["views"] = s.Find(".tgme_widget_message_views").Text()
