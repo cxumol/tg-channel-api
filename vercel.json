@@ -1,0 +1,17 @@
+{
+    "routes": [
+
+        {
+            "src": "/(?<channelID>[^/]+?)/(?<msgNum>.+)$",
+            "dest": "/api/tg?channelID=$channelID&msgNum=$msgNum"
+        },
+        {
+            "src": "/(?<channelID>[^/]+)$",
+            "dest": "/api/tg?channelID=$channelID"
+        },
+        {
+            "src": "/",
+            "dest": "/api/tg"
+        }
+    ]
+}
