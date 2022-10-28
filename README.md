@@ -5,8 +5,10 @@ A JSON API for latest messages of public Telegram channels.
 
 Try it now:
 
-- Check what Durov is up to: https://t-me.vercel.app/durov
-- Check the second-latest Durov's post: https://t-me.vercel.app/durov/2
+- ~~Check what Durov is up to: https://t-me.vercel.app/durov~~
+- ~~Check the second-latest Durov's post: https://t-me.vercel.app/durov/2~~
+
+> **Due to abusive amount of API requests, the free demo service has been stopped. Nonetheless, you are welcome to deploy your own instance.**
 
 Usage
 -----
